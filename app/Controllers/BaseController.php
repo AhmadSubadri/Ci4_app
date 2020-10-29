@@ -41,6 +41,12 @@ class BaseController extends Controller
 		//--------------------------------------------------------------------
 		// E.g.:
 		// $this->session = \Config\Services::session();
+		$this->name = 'Ahmad Subadri';
+		$this->alamat = 'Yogyakarta';
+		$this->umur = '21 Tahun';
+		$this->prodi = 'Sistem Informasi';
+		$this->fak = 'Teknologi Informasi';
+
 	}
 
 }

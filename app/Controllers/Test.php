@@ -1,6 +1,6 @@
 <?php namespace App\Controllers;
 
-class Home extends BaseController
+class Test extends BaseController
 {
 	public function index()
 	{
@@ -10,9 +10,9 @@ class Home extends BaseController
 
 	public function test(){
 		echo "ini adalah metode test";
-	}
-
-	public function namaku(){
+    }
+    
+    public function namaku(){
         echo "Nama Saya $this->name";
     }
 

@@ -32,6 +32,9 @@ $routes->setAutoRoute(true);
 // route since we don't have to scan directories.
 $routes->get('/', 'Home::index');
 
+$routes->get('/test', 'Test::namaku');
+$routes->get('/biodata', 'Biodata::index');
+
 /**
  * --------------------------------------------------------------------
  * Additional Routing
