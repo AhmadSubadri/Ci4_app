@@ -17,6 +17,7 @@ $(document).ready(function() {
         const penulis = $(this).data('penulis');
         const penerbit = $(this).data('penerbit');
 
+        $('#id').val(id);
         $('#judul').val(judul);
         $('#slug').val(slug);
         $('#penulis').val(penulis);

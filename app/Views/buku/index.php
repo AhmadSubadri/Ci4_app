@@ -18,11 +18,12 @@
             <td><?= $row->penulis;?></td>
             <td><?= $row->penerbit;?></td>
             <td>
-                <a href="#editModal" class="btn btn-info btn-sm btn-edit" data-id="<?= $row->id ?>"
+                <a href="javascript:;" class="btn btn-info btn-sm btn-edit" data-id="<?= $row->id ?>"
                     data-judul="<?= $row->judul;?>" data-penulis="<?= $row->penulis;?>"
-                    data-penerbit="<?= $row->penerbit;?>" role="button" data-toggle="modal">Edit</a>
-                <a href="#deleteModal" role="button" data-toggle="modal" class="btn btn-danger btn-sm btn-delete"
-                    data-id="<?= $row->id;?>">Delete</a>
+                    data-penerbit="<?= $row->penerbit;?>" data-target="#editModal" role="button"
+                    data-toggle="modal">Edit</a>
+                <a href="javascript:;" role="button" data-toggle="modal" class="btn btn-danger btn-sm btn-delete"
+                    data-id="<?= $row->id;?>" data-target="#deleteModal">Delete</a>
             </td>
         </tr>
         <?php endforeach;?>
@@ -82,22 +83,23 @@
                 <div class="modal-body">
                     <div class="form-group">
                         <label>Judul</label>
-                        <input type="text" class="form-control" name="judul" placeholder="Judul">
+                        <input type="text" class="form-control" id="judul" name="judul" placeholder="Judul">
                     </div>
                     <div class="form-group">
                         <label>Slug</label>
-                        <input type="text" class="form-control" name="slug" placeholder="Slug">
+                        <input type="text" class="form-control" id="slug" name="slug" placeholder="Slug">
                     </div>
                     <div class="form-group">
                         <label>Penulis</label>
-                        <input type="text" class="form-control" name="penulis" placeholder="Penulis">
+                        <input type="text" class="form-control" id="penulis" name="penulis" placeholder="Penulis">
                     </div>
                     <div class="form-group">
                         <label>Penerbit</label>
-                        <input type="text" class="form-control" name="penerbit" placeholder="Penerbit">
+                        <input type="text" class="form-control" id="penerbit" name="penerbit" placeholder="Penerbit">
                     </div>
                 </div>
                 <div class="modal-footer">
+                    <input type="hidden" name="id" id="id" class="id">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                     <button type="submit" class="btn btn-primary">Update</button>
                 </div>
@@ -122,6 +124,7 @@
                     <h4>Apakah ingin menghapus data ini ?</h4>
                 </div>
                 <div class="modal-footer">
+                    <input type="hidden" name="id" class="id" id="id">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
                     <button type="submit" class="btn btn-primary">Yes</button>
                 </div>

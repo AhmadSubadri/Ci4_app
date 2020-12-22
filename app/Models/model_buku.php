@@ -2,7 +2,7 @@
 
 use CodeIgniter\Model;
 
-class model_buku extends Model{
+class Model_buku extends Model{
     public function getBuku(){
         $builder = $this->db->table('Buku');
         $builder->select('*');

@@ -18,7 +18,7 @@ class Buku extends BaseController{
     }
 
     public function save(){
-        $model = new model_buku();
+        $model = new Model_buku();
         $data = array(
             'judul' => $this->request->getPost('judul'),
             'slug' => $this->request->getPost('slug'),
