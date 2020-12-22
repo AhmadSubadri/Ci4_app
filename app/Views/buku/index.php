@@ -23,7 +23,8 @@
                     data-penerbit="<?= $row->penerbit;?>" data-target="#editModal" role="button"
                     data-toggle="modal">Edit</a>
                 <a href="javascript:;" role="button" data-toggle="modal" class="btn btn-danger btn-sm btn-delete"
-                    data-id="<?= $row->id;?>" data-target="#deleteModal">Delete</a>
+                    data-id="<?= $row->id ?>" data-judul="<?= $row->judul;?>" data-penulis="<?= $row->penulis;?>"
+                    data-penerbit="<?= $row->penerbit;?>" data-target="#deleteModal">Delete</a>
             </td>
         </tr>
         <?php endforeach;?>
@@ -99,7 +100,7 @@
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <input type="hidden" name="id" id="id" class="id">
+                    <input type="hidden" name="id" id="id_buku" class="id">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                     <button type="submit" class="btn btn-primary">Update</button>
                 </div>
@@ -124,7 +125,7 @@
                     <h4>Apakah ingin menghapus data ini ?</h4>
                 </div>
                 <div class="modal-footer">
-                    <input type="hidden" name="id" class="id" id="id">
+                    <input type="hidden" name="id" id="id" class="id">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
                     <button type="submit" class="btn btn-primary">Yes</button>
                 </div>

@@ -17,7 +17,7 @@ $(document).ready(function() {
         const penulis = $(this).data('penulis');
         const penerbit = $(this).data('penerbit');
 
-        $('#id').val(id);
+        $('#id_buku').val(id);
         $('#judul').val(judul);
         $('#slug').val(slug);
         $('#penulis').val(penulis);
@@ -28,6 +28,7 @@ $(document).ready(function() {
 
     $('.btn-delete').on('click', function() {
         const id = $(this).data('id');
+
         $('#id').val(id);
         $('#deleteModal').modal('show');
     });
